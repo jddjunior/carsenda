@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-canvas text-ink antialiased font-sans;
+  }
+  ::selection {
+    @apply bg-accent text-accent-onaccent;
+  }
+}
+
+@layer components {
+  .field {
+    @apply w-full rounded-field border border-border bg-surface px-4 py-3 text-[15px] text-ink placeholder:text-ink-muted outline-none transition-colors focus:border-accent;
+  }
+  .btn-primary {
+    @apply flex w-full items-center justify-center rounded-field bg-accent py-3.5 text-[15px] font-extrabold text-accent-onaccent transition-opacity hover:opacity-90 disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply flex items-center justify-center rounded-field border border-border bg-transparent py-3.5 text-[15px] font-medium text-ink transition-colors hover:border-accent;
+  }
+}
